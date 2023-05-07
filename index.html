@@ -10,33 +10,47 @@
 
     <style>
         @font-face {
-            font-family: heading;
-            src: url(fonts/IBMPlexMono-SemiBold.ttf);
-        }
-
-        @font-face {
-            font-family: body;
+            font-family: yeeee;
             src: url(fonts/IBMPlexMono-LightItalic.ttf);
         }
 
-        body {
-            background-color: rgb(59, 50, 41);
+        html {
+            height: 100%;
+            margin: 0;
+            /* background-color: rgb(59, 50, 41); */
+            background-repeat: no-repeat;
+            background:
+                linear-gradient(180deg, rgba(255, 219, 183, .6), rgba(255, 255, 255, 0) 70%),
+                linear-gradient(0deg, rgba(123, 99, 45, 0.75), rgba(142, 119, 113, .2) 40%, rgba(255, 255, 255, 0) 90%),
+                url('data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycKICB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycKICB3aWR0aD0nMzAwJyBoZWlnaHQ9JzMwMCc+CgoJPGZpbHRlciBpZD0nbicgeD0nMCcgeT0nMCc+CgkJPGZlVHVyYnVsZW5jZQoJCSAgdHlwZT0nZnJhY3RhbE5vaXNlJwoJCSAgYmFzZUZyZXF1ZW5jeT0nMC44NScKCQkgIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCTwvZmlsdGVyPgoKCTxyZWN0IHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyBmaWxsPScjMDAwJy8+Cgk8cmVjdCB3aWR0aD0nMzAwJyBoZWlnaHQ9JzMwMCcgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PScwLjcnLz4KPC9zdmc+Cg==');
         }
 
-        #drawing {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;
-            max-width: 100%;
-            height: auto;
+        a {
+            outline: none;
+            text-decoration: none;
+            color: rgba(205, 254, 170, .8);
         }
 
-        h1 {
-            font-family: heading, Tahoma, sans-serif;
-            font-size: 72px;
-            font-size: max(4.8vw, 27px);
-            letter-spacing: 6px;
+        a:focus {
+            background: rgba(105, 0, 255, .4);
+        }
+
+        a:hover {
+            text-decoration: none;
+            background: rgba(105, 0, 255, .6);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            font-family: yeeee, Consolas, "Andale Mono", monospace;
+            font-size: 4rem;
+            letter-spacing: .1rem;
             text-align: center;
             color: transparent;
             animation-name: pulse;
@@ -45,11 +59,20 @@
             animation-iteration-count: infinite;
         }
 
-        p {
-            font-family: body, Consolas, "Andale Mono", monospace;
-            /* font-size: 22px; */
-            font-size: max(1.1vw, 6px);
-            letter-spacing: 2px;
+        .stuff {
+            font-family: yeeee, Consolas, "Andale Mono", monospace;
+            font-size: 1.2rem;
+            letter-spacing: .1rem;
+            text-align: center;
+            color: rgba(236, 249, 226, 0.66);
+        }
+
+        .footer {
+            font-family: yeeee, Consolas, "Andale Mono", monospace;
+            display: inline-block;
+            text-align: left;
+            font-size: 1rem;
+            letter-spacing: .1rem;
             line-height: 200%;
             color: rgba(197, 230, 172, 0.66);
             text-shadow:
@@ -65,6 +88,7 @@
                     0.95vw 0.2vw 0.7vw rgba(230, 205, 172, 0.11),
                     0.45vw -0.1vw 0.8vw rgba(172, 230, 196, 0.33);
             }
+
             to {
                 text-shadow:
                     0vw 0vw 0.3vw rgba(59, 50, 41, 0.84),
@@ -77,19 +101,31 @@
     </style>
 </head>
 
-<h1>Yeogai Choy</h1>
+<div class="main">
+    <div>
+        <h1 class="header">Yeogai Choy</h1>
+    </div>
 
-<div style="text-align: center;">
-        <div style="display: inline-block; text-align: left;">
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>3</u>)&nbsp;&nbsp;Anyone can break up a showing of an<br>
-                    enemy propaganda film by putting two or three<br>
-                    dozen large moths in a paper bag. Take the bag<br>
-                    to the movies with you, put it on the floor in an<br>
-                    empty section of the theater as you go in and<br>
-                    leave it open. The moths will fly out and climb<br>
-                    into the projector beam, so that the film will be<br>
-                    obscured by fluttering shadows.</p>
-        </div>
+    <div>
+        <p class="stuff">
+            <a href="https://www.linkedin.com/in/yeogai/">LinkedIn</a>
+            |
+            <a href="https://github.com/yeogai">GitHub</a>
+            |
+            {anything}-{md5(anything)}@yeogai.com
+        </p>
+    </div>
+
+    <div>
+        <p class="footer"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>3</u>)&nbsp;&nbsp;Anyone can break up a showing of an<br>
+            enemy propaganda film by putting two or three<br>
+            dozen large moths in a paper bag. Take the bag<br>
+            to the movies with you, put it on the floor in an<br>
+            empty section of the theater as you go in and<br>
+            leave it open. The moths will fly out and climb<br>
+            into the projector beam, so that the film will be<br>
+            obscured by fluttering shadows.</p>
+    </div>
 </div>
 
 </html>
